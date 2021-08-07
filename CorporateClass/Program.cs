@@ -35,7 +35,7 @@ namespace CorporateClass
                         Console.Write("     Employee name: ");
                         name = Console.ReadLine();
                         if (company.RemoveEmployee(name)) {
-                            Console.WriteLine($"     {name} has been removed from {company.Name}");
+                            Console.WriteLine($"     {name} has been removed from {company.Name}\n");
                         } else
                         {
                             Console.WriteLine($"     {name} not found");
@@ -57,12 +57,12 @@ namespace CorporateClass
             Console.Write("     ");
             company = Console.ReadLine();
             Company company1 = new Company(company, DateTime.Now);
+            Console.WriteLine("\n     {0:25}, created at {1:MM/dd/yy H:mm/s/zzz}\n", company1.Name, company1.CreatedOn);
             Console.WriteLine("     Add employees");
             AddEmplooyees(ref company1);
-
-            Console.WriteLine("     You added the company:");
-            Console.WriteLine("     {0:25}, created at {1:MM/dd/yy H:mm/s/zzz}", company1.Name, company1.CreatedOn);
+            Console.Write('\n');
             company1.ListEmployees();
+            Console.Write('\n');
 
         }
     }
