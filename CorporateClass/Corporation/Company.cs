@@ -36,7 +36,7 @@ namespace CorporateClass.Corporation
         public void ListEmployees()
         {
             Console.WriteLine($"     Current Employees of {Name}:");
-            Employees.ForEach(employee => Console.Write("     {0:25}, {1:25}\n", employee.Name, employee.Title));
+            Employees.ForEach(employee => Console.Write("     {0:25}, {1:25}, Hired at {2:MM/dd/yyyy}\n", employee.Name, employee.Title, employee.HireDate));
         }
 
         /*
